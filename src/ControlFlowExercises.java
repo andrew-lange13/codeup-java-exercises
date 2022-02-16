@@ -108,24 +108,25 @@ public class ControlFlowExercises {
         System.out.print("Do you want to continue? y or n : ");
         String userInput = scanner.next();
 
-        if(!userInput.equals("y")){
+        if (!userInput.equals("y")) {
             System.out.println("Bye Felicia!");
-        } else if(userGrade >= 98){
-            System.out.println("A+");
-        }else if(userGrade >= 88){
-            System.out.println("A");
-        }else if(userGrade >= 85){
-            System.out.println("B+");
-        }else if(userGrade >= 80){
-            System.out.println("B");
-        }else if(userGrade >= 67){
-            System.out.println("C");
-        }else if(userGrade >= 60){
-            System.out.println("D");
-        }else{
-            System.out.println("F");
+        } else {
+            if (userGrade >= 98) {
+                System.out.println("A+");
+            } else if (userGrade >= 88) {
+                System.out.println("A");
+            } else if (userGrade >= 85) {
+                System.out.println("B+");
+            } else if (userGrade >= 80) {
+                System.out.println("B");
+            } else if (userGrade >= 67) {
+                System.out.println("C");
+            } else if (userGrade >= 60) {
+                System.out.println("D");
+            }else {
+                System.out.println("F");
+            }
         }
-
 
 
     }
