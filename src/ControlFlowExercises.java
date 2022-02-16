@@ -98,6 +98,8 @@ public class ControlFlowExercises {
             }
         }*/
 
+        //grade letter conversion
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter your grade (0-100): ");
