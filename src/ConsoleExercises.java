@@ -29,14 +29,14 @@ public class ConsoleExercises {
 
         // enter 3 words in scanner
 
-        /*Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter 3 words: ");
         String userInput1 = scanner.next();
         String userInput2 = scanner.next();
         String userInput3 = scanner.next();
 
-        System.out.printf(userInput1 + "%n" + userInput2 + "%n" + userInput3);*/
+        System.out.printf(userInput1 + "%n" + userInput2 + "%n" + userInput3);
 
         // enter sentence in scanner
 
@@ -58,25 +58,27 @@ public class ConsoleExercises {
 
         // calculate perimeter and area of your room
 
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter the length of your room: ");
-        String userLength = scanner.nextLine();
-
-        System.out.print("Enter the width of your room: ");
-        String userWidth = scanner.nextLine();
-
-        System.out.print("Enter the height of your room: ");
-        String userHeight = scanner.nextLine();
-
-
-        float userLengthInt = Float.parseFloat(userLength);
-        float userWidthInt = Float.parseFloat(userWidth);
-        float userHeightInt = Float.parseFloat(userHeight);
-
-        System.out.printf("The area of your room is: %.2f%s%n", (userLengthInt * userWidthInt), " square feet.");
-        System.out.printf("The perimeter of your room is: %.2f%s%n", ((userLengthInt * 2) + (userWidthInt * 2)), " feet.");
-        System.out.printf("The volume of your room is: %.2f%s%n", (userLengthInt * userWidthInt * userHeightInt), " cubic feet.");
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Enter the length of your room: ");
+//        String userLength = scanner.nextLine();
+//
+//        System.out.print("Enter the width of your room: ");
+//        String userWidth = scanner.nextLine();
+//
+//        System.out.print("Enter the height of your room: ");
+//        String userHeight = scanner.nextLine();
+//
+//
+//        float userLengthInt = Float.parseFloat(userLength);
+//        float userWidthInt = Float.parseFloat(userWidth);
+//        float userHeightInt = Float.parseFloat(userHeight);
+//
+//        System.out.printf("The area of your room is: %.2f%s%n", (userLengthInt * userWidthInt), " square feet.");
+//        System.out.printf("The perimeter of your room is: %.2f%s%n", ((userLengthInt * 2) + (userWidthInt * 2)), " feet.");
+//        System.out.printf("The volume of your room is: %.2f%s%n", (userLengthInt * userWidthInt * userHeightInt), " cubic feet.");
+//
+//        scanner.useDelimiter("\n");
 
     }
 }
