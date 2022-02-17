@@ -9,8 +9,11 @@ public class ConsoleAdventure {
         //creat random number generator
         int randomNumber = (int) (Math.random() * 20) + 1;
 
-        //create character name variable
-        String player1;
+        //create character variable
+        String player;
+        int health;
+        int attackPoints;
+        int defensePoints;
 
         //start game prompt
         System.out.print("Do you want to play a game? y or n:  ");
@@ -24,8 +27,11 @@ public class ConsoleAdventure {
             // name the character
             System.out.print("What is your characters name? ");
             // assign name to player1
-            player1 = scanner.nextLine();
-            System.out.printf("Welcome to the dungeon %s%n", player1);
+            player = scanner.nextLine();
+            health = 100;
+            attackPoints = 10;
+            defensePoints = 10;
+            System.out.printf("Welcome to the dungeon %s%s%n%s%d%s%d%s%d%s", player, "!", "Your health = ", health, " and you have ", attackPoints, " attack points and ", defensePoints, " defense points.");
         }
 
 
