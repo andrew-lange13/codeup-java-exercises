@@ -92,8 +92,6 @@ public class MethodsExercises {
 
     public static void dice() {
 
-        Random rand = new Random();
-
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("How many sides do your dice have? ");
@@ -105,8 +103,8 @@ public class MethodsExercises {
         boolean diceBoolean = true;
 
         while (diceBoolean) {
-            int randomNum = rand.nextInt((diceSides - 1) + 1) + 1;
-            int randomNum2 = rand.nextInt((diceSides - 1) + 1) + 1;
+            int randomNum = (int)(Math.random() * diceSides)+1;
+            int randomNum2 = (int)(Math.random() * diceSides)+1;
             if (!roll.equals("y")) {
                 System.out.println("No dice for you!");
                 diceBoolean = false;
