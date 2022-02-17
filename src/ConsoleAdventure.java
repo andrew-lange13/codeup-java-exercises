@@ -13,11 +13,11 @@ public class ConsoleAdventure {
         String player1;
 
         //start game prompt
-        System.out.print("Do you want to play a game? y/n:  ");
+        System.out.print("Do you want to play a game? y or n:  ");
         String startPrompt = scanner.nextLine();
 
         // if/else to evaluate start game prompt
-        if(!startPrompt.equals("y")){
+        if(!startPrompt.equalsIgnoreCase("y")){
             System.out.println("No game for you!");
         } else{
             System.out.println("Lets Begin!");
