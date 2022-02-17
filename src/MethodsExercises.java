@@ -94,26 +94,32 @@ public class MethodsExercises {
 
         Random rand = new Random();
 
-
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("How many side do your dice have? ");
+        System.out.print("How many sides do your dice have? ");
         int diceSides = scanner.nextInt();
 
         System.out.print("Would you like to roll the dice? (y/n)  ");
         String roll = scanner.next();
 
-        int randomNum = rand.nextInt((diceSides - 1) + 1) + 1;
-        int randomNum2 = rand.nextInt((diceSides - 1) + 1) + 1;
+        boolean diceBoolean = true;
 
-
-        if(!roll.equals("y")){
-            System.out.println("No dice for you!");
-        } else {
-            System.out.println(randomNum);
-            System.out.println(randomNum2);
+        while (diceBoolean) {
+            int randomNum = rand.nextInt((diceSides - 1) + 1) + 1;
+            int randomNum2 = rand.nextInt((diceSides - 1) + 1) + 1;
+            if (!roll.equals("y")) {
+                System.out.println("No dice for you!");
+                diceBoolean = false;
+            } else {
+                System.out.println(randomNum);
+                System.out.println(randomNum2);
+                System.out.print("Would you like to roll the dice again? (y/n)  ");
+                String rollAgain = scanner.next();
+                if(!rollAgain.equals("y")){
+                    diceBoolean = false;
+                }
+            }
         }
-
     }
 
     public static void main(String[] args) {
