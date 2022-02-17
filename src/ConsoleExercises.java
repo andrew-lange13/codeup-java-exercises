@@ -4,10 +4,8 @@ public class ConsoleExercises {
     public static void main(String[] args){
 
         //Output pi
-/*
-        double pi = 3.14159;
-        System.out.printf("The value of pi is approximately %.2f%s%n", pi, ".");
-*/
+//        double pi = 3.14159;
+//        System.out.printf("The value of pi is approximately %.2f%s%n", pi, ".");
 
         //add string from scanner
 
@@ -29,14 +27,14 @@ public class ConsoleExercises {
 
         // enter 3 words in scanner
 
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter 3 words: ");
-        String userInput1 = scanner.next();
-        String userInput2 = scanner.next();
-        String userInput3 = scanner.next();
-
-        System.out.printf(userInput1 + "%n" + userInput2 + "%n" + userInput3);
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Enter 3 words: ");
+//        String userInput1 = scanner.next();
+//        String userInput2 = scanner.next();
+//        String userInput3 = scanner.next();
+//
+//        System.out.printf(userInput1 + "%n" + userInput2 + "%n" + userInput3);
 
         // enter sentence in scanner
 
