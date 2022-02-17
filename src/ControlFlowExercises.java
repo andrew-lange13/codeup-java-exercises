@@ -5,11 +5,11 @@ public class ControlFlowExercises {
 
         // while loop to 15
 
-        /*int i = 5;
-        while(i <= 15){
-            System.out.print(i + " ");
-            i++;
-        }*/
+//        int i = 5;
+//        while(i <= 15){
+//            System.out.print(i + " ");
+//            i++;
+//        }
 
         //for loop to 15
 
