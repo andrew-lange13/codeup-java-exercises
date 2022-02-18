@@ -17,7 +17,7 @@ public class Bob {
                 System.out.println("Sure.");
             } else if (bobInput.endsWith("!")) {
                 System.out.println("Whoa, chill out!");
-            } else if (bobInput.equals("exit")) {
+            } else if (bobInput.equalsIgnoreCase("exit")) {
                 bobTalk = false;
             } else {
                 System.out.println("Whatever.");
