@@ -16,7 +16,7 @@ public class HighLow {
             guessCounter++;
             userGuess = scanner.nextInt();
             if (userGuess < 1 || userGuess > 100) {
-                System.out.println("Your guess is outside range, try again.");
+                System.out.println("Your guess is outside range, try again");
             } else if (userGuess > randomNumber) {
                 System.out.println("LOWER");
                 System.out.printf("That was guess number %d%s%d%s%n", guessCounter, ", You have ", (10 - guessCounter), " guesses remaining.");

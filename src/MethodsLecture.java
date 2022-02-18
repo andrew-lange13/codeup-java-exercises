@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class MethodsLecture {
     public static void main(String[] args) {
         System.out.println(addNums(1,3));
+        System.out.println(addNums());
 
     }
 

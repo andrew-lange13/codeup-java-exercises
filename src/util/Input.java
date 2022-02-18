@@ -15,7 +15,7 @@ public class Input {
     }
 
     public String getString(String prompt){
-        System.out.println(prompt);
+        System.out.print(prompt);
         return this.scanner.nextLine();
     }
 
@@ -24,9 +24,18 @@ public class Input {
     }
 
     public boolean yesNo(String prompt){
-        System.out.println(prompt);
+        System.out.print(prompt);
         String userAnswer = this.scanner.nextLine();
         return userAnswer.equalsIgnoreCase("y") | userAnswer.equalsIgnoreCase("yes");
+    }
+
+    public int getInt(){
+        return getInt("Enter an integer: ");
+    }
+
+    public int getInt(String prompt){
+        System.out.print(prompt);
+        return this.scanner.nextInt();
     }
 
 
