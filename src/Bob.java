@@ -8,7 +8,7 @@ public class Bob {
 
 //        System.out.println(bobInput);
         while (bobTalk) {
-            String bob = "Talk to Bob: ";
+            String bob = "Talk to Bob or type exit to leave: ";
             System.out.print(bob);
             String bobInput = scanner.nextLine();
             if (bobInput.isEmpty()) {
