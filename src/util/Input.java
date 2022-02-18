@@ -10,5 +10,10 @@ public class Input {
         this.scanner = new Scanner(System.in);
     }
 
+    public String getString(){
+        System.out.print("Enter a string: ");
+        return this.scanner.nextLine();
+    }
+
 
 }
