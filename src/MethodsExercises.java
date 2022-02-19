@@ -86,38 +86,66 @@ public class MethodsExercises {
 //        }
 //    }
 
+//    factorial with recursion
+
+//    public static int factorialRecur(int num) {
+//        if (num == 1) {
+//            return 1;
+//        } else {
+//            return num * factorialRecur(num - 1);
+//        }
+//    }
+//
+//    public static void factorial() {
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Enter a number between 1 and 20: ");
+//        int userInput = scanner.nextInt();
+//        if (userInput >= 1 && userInput <= 20) {
+//            System.out.println("You entered: " + userInput);
+//            System.out.print("Do you want to continue? (y or n): ");
+//            String userContinue = scanner.next();
+//            if (!userContinue.equals("y")) {
+//                System.out.println("Have an average day.");
+//            } else {
+//                System.out.printf("%d%s%d%n", userInput , "! = ", factorialRecur(userInput));
+//            }
+//        } else {
+//            System.out.println("Your entry is not valid");
+//        }
+//    }
 
     //dice rolling
 
-    public static void dice() {
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("How many sides do your dice have? ");
-        int diceSides = scanner.nextInt();
-
-        System.out.print("Would you like to roll the dice? (y/n)  ");
-        String roll = scanner.next();
-
-        boolean diceBoolean = true;
-
-        while (diceBoolean) {
-            int randomNum = (int)(Math.random() * diceSides)+1;
-            int randomNum2 = (int)(Math.random() * diceSides)+1;
-            if (!roll.equals("y")) {
-                System.out.println("No dice for you!");
-                diceBoolean = false;
-            } else {
-                System.out.println(randomNum);
-                System.out.println(randomNum2);
-                System.out.print("Would you like to roll the dice again? (y/n)  ");
-                String rollAgain = scanner.next();
-                if(!rollAgain.equals("y")){
-                    diceBoolean = false;
-                }
-            }
-        }
-    }
+//    public static void dice() {
+//
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("How many sides do your dice have? ");
+//        int diceSides = scanner.nextInt();
+//
+//        System.out.print("Would you like to roll the dice? (y/n)  ");
+//        String roll = scanner.next();
+//
+//        boolean diceBoolean = true;
+//
+//        while (diceBoolean) {
+//            int randomNum = (int)(Math.random() * diceSides)+1;
+//            int randomNum2 = (int)(Math.random() * diceSides)+1;
+//            if (!roll.equals("y")) {
+//                System.out.println("No dice for you!");
+//                diceBoolean = false;
+//            } else {
+//                System.out.println(randomNum);
+//                System.out.println(randomNum2);
+//                System.out.print("Would you like to roll the dice again? (y/n)  ");
+//                String rollAgain = scanner.next();
+//                if(!rollAgain.equals("y")){
+//                    diceBoolean = false;
+//                }
+//            }
+//        }
+//    }
 
     public static void main(String[] args) {
 //        System.out.println(addition(7, 14));
@@ -127,9 +155,11 @@ public class MethodsExercises {
 //        System.out.println(remainder(7, 3));
 //        getInteger();
 //        factorial();
-        dice();
+//        dice();
+
 
     }
 
 
 }
+
