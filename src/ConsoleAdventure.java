@@ -12,7 +12,6 @@ public class ConsoleAdventure {
 
         //create player and enemy variables
         String player;
-        String name;
         int playerHealth;
         int playerAttackPoints;
         int playerDefensePoints;
@@ -30,37 +29,52 @@ public class ConsoleAdventure {
                 "██║  ██║██████╔╝ ╚████╔╝ ███████╗██║ ╚████║   ██║   ╚██████╔╝██║  ██║███████╗       ██║   ██║██║ ╚═╝ ██║███████╗    ██╗██╗\n" +
                 "╚═╝  ╚═╝╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═══╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝       ╚═╝   ╚═╝╚═╝     ╚═╝╚══════╝    ╚═╝╚═╝\n" +
                 "                                                                                                                          ");
-        System.out.print("Do you want to play a game?   ");
+        System.out.print("Do you want to play a game? [1]:Yes  [2]:No  ");
         String startPrompt = scanner.nextLine();
 
         // if/else to evaluate start game prompt
-        if(startPrompt.equalsIgnoreCase("yes")){
+        if (startPrompt.equals("1")) {
             // name the character
             System.out.print("What is your characters name? ");
             // assign name to player1
             player = scanner.nextLine();
-            System.out.printf("Welcome to the adventure %s%s%n", player, "!");
-            System.out.print("You only make it 7 steps into the dungeon when a level 1 goblinator attacks!! Fight or Flight?? :  ");
-            String fightFlight = scanner.nextLine();
-            if (!fightFlight.equalsIgnoreCase("fight")){
-                System.out.println("You run away........Coward");
-            } else {
-                System.out.println("Let the fight begin!");
-                name = "goblinator";
-                enemy1Health = 5;
-                enemy1AttackPoints = 1;
-                enemy1DefensePoints = 1;
-                System.out.printf("%s%s%d%s%d%s%d%s%n", name, " health = ", enemy1Health, " and it has ", enemy1AttackPoints, " attack points and ", enemy1DefensePoints, " defense points.");
-                System.out.println(player + " attacks first and rolls the dice.");
-                System.out.printf("%s%s%d%n", player, " rolls a ", randomNumber);
-                System.out.printf("%s%s%d%s%s%n", player, " does ", (randomNumber), " damage to ", name);
-            }
+            System.out.printf("Welcome to your adventure %s%s%n%n%n", player, "!");
+            System.out.printf("There you were, minding your own business, eating a Big Mac while riding your horse through town. %n%s%n%s%n%s%n", "When suddenly a giant sinkhole emerges in front of you!!!", "Being the dimwitted hero that you are, you mindlessly jump right in the massive hole...", "As your eyes adjust to the darkness you see something truly terrifying walking towards you...");
+            scanner.nextLine();
+            System.out.println("" +
+                    "                             ___-------___\n" +
+                    "                         _-~~             ~~-_\n" +
+                    "                      _-~                    /~-_\n" +
+                    "   /^\\__/^\\         /~  \\                   /    \\\n" +
+                    " /|  O|| O|        /      \\_______________/        \\\n" +
+                    "| |___||__|      /       /                \\          \\\n" +
+                    "|          \\    /      /                    \\          \\\n" +
+                    "|   (_______) /______/                        \\_________ \\\n" +
+                    "|         / /         \\                      /            \\\n" +
+                    " \\         \\^\\\\         \\                  /               \\     /\n" +
+                    "   \\         ||           \\______________/      _-_       //\\__//\n" +
+                    "     \\       ||------_-~~-_ ------------- \\ --/~   ~\\    || __/\n" +
+                    "       ~-----||====/~     |==================|       |/~~~~~\n" +
+                    "        (_(__/  ./     /                    \\_\\      \\.\n" +
+                    "               (_(___/                         \\_____)_)\n");
 
 
-        } else{
-            System.out.println("No game for you");
+        } else {
+            System.out.println(" " +
+                    "" +
+                    "\n" +
+                    "  █████████    █████████   ██████   ██████ ██████████       ███████    █████   █████ ██████████ ███████████  \n" +
+                    "  ███░░░░░███  ███░░░░░███ ░░██████ ██████ ░░███░░░░░█     ███░░░░░███ ░░███   ░░███ ░░███░░░░░█░░███░░░░░███ \n" +
+                    " ███     ░░░  ░███    ░███  ░███░█████░███  ░███  █ ░     ███     ░░███ ░███    ░███  ░███  █ ░  ░███    ░███ \n" +
+                    "░███          ░███████████  ░███░░███ ░███  ░██████      ░███      ░███ ░███    ░███  ░██████    ░██████████  \n" +
+                    "░███    █████ ░███░░░░░███  ░███ ░░░  ░███  ░███░░█      ░███      ░███ ░░███   ███   ░███░░█    ░███░░░░░███ \n" +
+                    "░░███  ░░███  ░███    ░███  ░███      ░███  ░███ ░   █   ░░███     ███   ░░░█████░    ░███ ░   █ ░███    ░███ \n" +
+                    " ░░█████████  █████   █████ █████     █████ ██████████    ░░░███████░      ░░███      ██████████ █████   █████\n" +
+                    "  ░░░░░░░░░  ░░░░░   ░░░░░ ░░░░░     ░░░░░ ░░░░░░░░░░       ░░░░░░░         ░░░      ░░░░░░░░░░ ░░░░░   ░░░░░ \n" +
+                    "                                                                                                              \n" +
+                    "                                                                                                              \n" +
+                    "                                                                                                              ");
         }
-
 
 
     }
