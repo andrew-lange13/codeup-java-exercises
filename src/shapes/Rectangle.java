@@ -6,9 +6,9 @@ public class Rectangle {
     protected int width;
 
 
-    public Rectangle(int a, int b){
-        length = a;
-        width = b;
+    public Rectangle(int length, int width){
+        this.length = length;
+        this.width = width;
     }
 
     public int getPerimeter() {
