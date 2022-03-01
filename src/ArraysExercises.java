@@ -6,8 +6,7 @@ public class ArraysExercises {
         Person[] newArr = Arrays.copyOf(people, people.length + 1);
         newArr[newArr.length - 1] = newPerson;
         System.out.println("newPerson = " + newPerson.getName());
-        for (int i = 0; i < newArr.length; i++) {
-            Person person = newArr[i];
+        for (Person person : newArr) {
             System.out.println(person.getName());
         }
         return newArr;
@@ -24,8 +23,7 @@ public class ArraysExercises {
         people[1] = new Person("bob");
         people[2] = new Person("fred");
 
-        for (int i = 0; i < people.length; i++) {
-            Person person = people[i];
+        for (Person person : people) {
             System.out.println(person.getName());
         }
 
