@@ -51,6 +51,7 @@ public class GradesApplication {
             String userInput = scan.nextLine();
             if (userInput.equals("bobo96")) {
                 System.out.println("Name: " + students.get(userInput).getName() + " - GitHub Username: " + userInput);
+                System.out.println("The students grades: " + students.get(userInput).getStudentGrades());
                 System.out.println("Current Average: " + students.get(userInput).getGradeAverage());
                 System.out.println();
                 System.out.println("Would you like to see another student?");
@@ -60,6 +61,7 @@ public class GradesApplication {
                 }
             } else if (userInput.equals("jeffy42")) {
                 System.out.println("Name: " + students.get(userInput).getName() + " - GitHub Username: " + userInput);
+                System.out.println("The students grades: " + students.get(userInput).getStudentGrades());
                 System.out.println("Current Average: " + students.get(userInput).getGradeAverage());
                 System.out.println();
                 System.out.println("Would you like to see another student?");
@@ -69,6 +71,7 @@ public class GradesApplication {
                 }
             } else if (userInput.equals("turtles83")) {
                 System.out.println("Name: " + students.get(userInput).getName() + " - GitHub Username: " + userInput);
+                System.out.println("The students grades: " + students.get(userInput).getStudentGrades());
                 System.out.println("Current Average: " + students.get(userInput).getGradeAverage());
                 System.out.println();
                 System.out.println("Would you like to see another student?");
@@ -79,6 +82,7 @@ public class GradesApplication {
 
             } else if (userInput.equals("mike_mike")) {
                 System.out.println("Name: " + students.get(userInput).getName() + " - GitHub Username: " + userInput);
+                System.out.println("The students grades: " + students.get(userInput).getStudentGrades());
                 System.out.println("Current Average: " + students.get(userInput).getGradeAverage());
                 System.out.println();
                 System.out.println("Would you like to see another student?");
