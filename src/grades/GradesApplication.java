@@ -1,6 +1,7 @@
 package grades;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -43,13 +44,13 @@ public class GradesApplication {
         for (String student : students.keySet()) {
             System.out.print("|" + student + "|  ");
         }
+        System.out.print("| all grades | | class average |");
         System.out.println();
         boolean keepGoing = true;
         do {
             System.out.println();
             System.out.println("What student would you like to see more information on?");
             System.out.println();
-            System.out.println("Type all to return all grades");
             String userInput = scan.nextLine();
             if (userInput.equals("bobo96")) {
                 System.out.println("Name: " + students.get(userInput).getName() + " - GitHub Username: " + userInput);
@@ -92,13 +93,28 @@ public class GradesApplication {
                 if (yesNo.equalsIgnoreCase("no")) {
                     keepGoing = false;
                 }
-            }
-            else if (userInput.equalsIgnoreCase("all")){
-                for(Student student : students.values()){
-                    System.out.println(student.getStudentGrades());
+            } else if (userInput.equalsIgnoreCase("all") || userInput.equalsIgnoreCase("all grades")) {
+                for (Student student : students.values()) {
+                    System.out.print(student.getStudentGrades() + " ");
                 }
-            }
-            else{
+                System.out.println();
+                System.out.println("Would you like to see another student?");
+                String yesNo = scan.nextLine();
+                if (yesNo.equalsIgnoreCase("no")) {
+                    keepGoing = false;
+                }
+            } else if (userInput.equalsIgnoreCase("average") || userInput.equalsIgnoreCase("class average")) {
+//                for (Student student : students.values()) {
+//                    System.out.println(student.getGradeAverage());
+//                }
+                System.out.println("Class average -- " + (students.get("bobo96").getGradeAverage() + students.get("jeffy42").getGradeAverage() + students.get("turtles83").getGradeAverage() + students.get("mike_mike").getGradeAverage()) / 4);
+                System.out.println();
+                System.out.println("Would you like to see another student?");
+                String yesNo = scan.nextLine();
+                if (yesNo.equalsIgnoreCase("no")) {
+                    keepGoing = false;
+                }
+            } else {
                 System.out.println("Sorry no student found with the GitHub username of " + userInput);
                 System.out.println();
                 System.out.println("Would you like to see another student?");
