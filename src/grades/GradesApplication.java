@@ -104,9 +104,6 @@ public class GradesApplication {
                     keepGoing = false;
                 }
             } else if (userInput.equalsIgnoreCase("average") || userInput.equalsIgnoreCase("class average")) {
-//                for (Student student : students.values()) {
-//                    System.out.println(student.getGradeAverage());
-//                }
                 System.out.println("Class average -- " + (students.get("bobo96").getGradeAverage() + students.get("jeffy42").getGradeAverage() + students.get("turtles83").getGradeAverage() + students.get("mike_mike").getGradeAverage()) / 4);
                 System.out.println();
                 System.out.println("Would you like to see another student?");
@@ -114,9 +111,9 @@ public class GradesApplication {
                 if (yesNo.equalsIgnoreCase("no")) {
                     keepGoing = false;
                 }
-            }else if(userInput.equalsIgnoreCase("csv") || userInput.equalsIgnoreCase("csv report")){
+            } else if (userInput.equalsIgnoreCase("csv") || userInput.equalsIgnoreCase("csv report")) {
                 System.out.println("name, github_username, average");
-                for (String student : students.keySet()){
+                for (String student : students.keySet()) {
                     System.out.println(students.get(student).getName() + ",  " + student + ",  " + students.get(student).getGradeAverage());
                 }
                 System.out.println();
@@ -125,8 +122,7 @@ public class GradesApplication {
                 if (yesNo.equalsIgnoreCase("no")) {
                     keepGoing = false;
                 }
-            }
-            else {
+            } else {
                 System.out.println("Sorry no student found with the GitHub username of " + userInput);
                 System.out.println();
                 System.out.println("Would you like to see another student?");
