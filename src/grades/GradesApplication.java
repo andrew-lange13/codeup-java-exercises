@@ -48,6 +48,8 @@ public class GradesApplication {
         do {
             System.out.println();
             System.out.println("What student would you like to see more information on?");
+            System.out.println();
+            System.out.println("Type all to return all grades");
             String userInput = scan.nextLine();
             if (userInput.equals("bobo96")) {
                 System.out.println("Name: " + students.get(userInput).getName() + " - GitHub Username: " + userInput);
@@ -89,6 +91,11 @@ public class GradesApplication {
                 String yesNo = scan.nextLine();
                 if (yesNo.equalsIgnoreCase("no")) {
                     keepGoing = false;
+                }
+            }
+            else if (userInput.equalsIgnoreCase("all")){
+                for(Student student : students.values()){
+                    System.out.println(student.getStudentGrades());
                 }
             }
             else{
