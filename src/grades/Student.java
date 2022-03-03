@@ -16,7 +16,7 @@ public class Student {
     public String getName(){
         return studentName;
     }
-
+    // TODO: returns students grades array
     public ArrayList<Integer> getStudentGrades() {
         return studentGrades;
     }
