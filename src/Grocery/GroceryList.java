@@ -82,6 +82,7 @@ public class GroceryList {
     public static void main(String[] args) {
 
         listyList();
+        System.out.println("this is for the push");
 
     }
 }
