@@ -9,5 +9,6 @@ public class InputTest {
 //        System.out.println(test.getInt(7, 77));
 //        System.out.println(test.getDouble("Enter a double"));
 //        System.out.println(test.getBinary());
+//        System.out.println(test.getHex());
     }
 }
