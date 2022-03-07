@@ -13,6 +13,10 @@ public class GroceryList {
 
         Scanner scan = new Scanner(System.in);
         int listChoice = 0;
+        TreeMap<String, Integer> meatMap = new TreeMap<>();
+        TreeMap<String, Integer> fruitMap = new TreeMap<>();
+        TreeMap<String, Integer> veggieMap = new TreeMap<>();
+        TreeMap<String, Integer> drinkMap = new TreeMap<>();
         boolean keepGoing = true;
 
         System.out.println("Would you like to make a grocery list");
@@ -23,7 +27,6 @@ public class GroceryList {
                 System.out.print("Pick a category 1-5: ");
                 listChoice = scan.nextInt();
                 if (listChoice == 1) {
-                    TreeMap<String, Integer> meatMap = new TreeMap<>();
                     groceries.add(meatMap);
                     System.out.print("Enter the name of the item you want to add: ");
                     String item = scan.next();
@@ -33,7 +36,6 @@ public class GroceryList {
                     meatMap.put(newItem.getThing(), newItem.getThingQuantity());
 
                 } else if (listChoice == 2) {
-                    TreeMap<String, Integer> fruitMap = new TreeMap<>();
                     groceries.add(fruitMap);
                     System.out.print("Enter the name of the item you want to add: ");
                     String item = scan.next();
@@ -43,7 +45,6 @@ public class GroceryList {
                     fruitMap.put(newItem.getThing(), newItem.getThingQuantity());
 
                 } else if (listChoice == 3) {
-                    TreeMap<String, Integer> veggieMap = new TreeMap<>();
                     groceries.add(veggieMap);
                     System.out.print("Enter the name of the item you want to add: ");
                     String item = scan.next();
@@ -53,7 +54,6 @@ public class GroceryList {
                     veggieMap.put(newItem.getThing(), newItem.getThingQuantity());
 
                 } else if (listChoice == 4) {
-                    TreeMap<String, Integer> drinkMap = new TreeMap<>();
                     groceries.add(drinkMap);
                     System.out.print("Enter the name of the item you want to add: ");
                     String item = scan.next();
@@ -67,14 +67,19 @@ public class GroceryList {
                 }
             }
         }
-        System.out.println("groceries = " + groceries);
-        for (Map<String, Integer> entry : groceries) {
-            for (String key : entry.keySet()) {
-                Integer value = entry.get(key);
-                System.out.print("item = " + key + "  ||  ");
-                System.out.println("quantity = " + value);
-            }
-        }
+        System.out.println();
+        System.out.println("grocery list: ");
+        System.out.println(meatMap);
+        System.out.println(fruitMap);
+        System.out.println(veggieMap);
+        System.out.println(drinkMap);
+//        for (Map<String, Integer> entry : groceries) {
+//            for (String key : entry.keySet()) {
+//                Integer value = entry.get(key);
+//                System.out.print("item = " + key + "  ||  ");
+//                System.out.println("quantity = " + value);
+//            }
+//        }
     }
 
 
