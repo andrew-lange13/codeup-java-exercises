@@ -8,6 +8,7 @@ public class Input {
 
     public Input() {
         this.scanner = new Scanner(System.in);
+        this.scanner.useDelimiter(System.lineSeparator());
     }
 
     public String getString() {
@@ -16,7 +17,7 @@ public class Input {
 
     public String getString(String prompt) {
         System.out.print(prompt);
-        return this.scanner.nextLine();
+        return this.scanner.next();
     }
 
     public boolean yesNo() {
@@ -34,8 +35,15 @@ public class Input {
     }
 
     public int getInt(String prompt) {
-        System.out.print(prompt);
-        return this.scanner.nextInt();
+        try {
+            System.out.print(prompt);
+            return Integer.parseInt(this.getString());
+        }
+        catch(Exception e){
+            System.out.println("Couldn't parse that ish" + e.getMessage());
+            e.printStackTrace();
+        }
+        return getInt();
     }
 
     public int getInt(int min, int max) {
@@ -57,9 +65,16 @@ public class Input {
     }
 
     public double getDouble(String prompt) {
-        System.out.print(prompt);
-        return this.scanner.nextDouble();
+        try {
+            System.out.print(prompt);
+            return Double.parseDouble(getString("Enter a double"));
+        } catch (Exception e) {
+            System.out.println("Couldn't parse that ish" + e.getMessage());
+            e.printStackTrace();
+        }
+        return getDouble();
     }
+
 
     public double getDouble(double min, double max) {
         return getDouble("Enter a double between " + min + " and " + max + "  ", min, max);
