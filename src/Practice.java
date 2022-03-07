@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Practice {
@@ -86,6 +87,13 @@ public class Practice {
 //    public static String shout(String string){
 //        return string.toUpperCase() + " !!!";
 //    }
+
+//    1. Within your `Assessment` class create a public static method named `removeCats`. It should accept a list of animal objects and return a list of animal objects where any animal object with a species of "Felis catus" is removed.
+
+    public static List<Animal> removeCats(List<Animal> animal){
+        animal.remove("Felis catus");
+        return animal;
+    }
 
     public static void main(String[] args) {
 
