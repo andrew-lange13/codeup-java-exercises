@@ -12,6 +12,7 @@ public class GroceryList {
     public static void listyList() {
 
         Scanner scan = new Scanner(System.in);
+        scan.useDelimiter(System.lineSeparator());
         int listChoice = 0;
         TreeMap<String, Integer> meatMap = new TreeMap<>();
         TreeMap<String, Integer> fruitMap = new TreeMap<>();
