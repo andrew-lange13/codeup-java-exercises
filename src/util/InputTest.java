@@ -7,6 +7,7 @@ public class InputTest {
 //        System.out.println(test.getString());
 //        System.out.println(test.yesNo());
 //        System.out.println(test.getInt(7, 77));
-//        System.out.println(test.getDouble(7.77, 77.77));
+//        System.out.println(test.getDouble("Enter a double"));
+//        System.out.println(test.getBinary());
     }
 }
