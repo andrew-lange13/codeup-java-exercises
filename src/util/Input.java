@@ -90,10 +90,16 @@ public class Input {
         } while (true);
     }
 
-    public String getBinary(){
+    public int getBinary(){
         System.out.print("Enter a number: ");
-         int binaryGuy = this.scanner.nextInt();
-         return Integer.toBinaryString(binaryGuy);
+         String binaryGuy = this.scanner.next();
+         return Integer.valueOf(binaryGuy, 2);
+    }
+
+    public int getHex(){
+        System.out.print("Enter a number: ");
+        String hexGuy = this.scanner.next();
+        return Integer.valueOf(hexGuy, 16);
     }
 
 }
