@@ -32,7 +32,12 @@ public class Input {
     }
 
     public int getInt() {
-        return this.scanner.nextInt();
+        try {
+            return Integer.parseInt(this.getString());
+        } catch(Exception e){
+            e.printStackTrace();
+            throw new NumberFormatException();
+        }
     }
 
     public int getInt(String prompt) {
@@ -40,10 +45,9 @@ public class Input {
             System.out.print(prompt);
             return Integer.parseInt(this.getString());
         } catch (Exception e) {
-            System.out.println("Couldn't parse that ish" + e.getMessage());
             e.printStackTrace();
+            throw new NumberFormatException();
         }
-        return getInt();
     }
 
     public int getInt(int min, int max) {
@@ -61,7 +65,12 @@ public class Input {
     }
 
     public double getDouble() {
-        return this.scanner.nextDouble();
+        try {
+            return Double.parseDouble(getString());
+        } catch(Exception e){
+            e.printStackTrace();
+            throw new NumberFormatException();
+        }
     }
 
     public double getDouble(String prompt) {
@@ -69,10 +78,9 @@ public class Input {
             System.out.print(prompt);
             return Double.parseDouble(getString());
         } catch (Exception e) {
-            System.out.println("Couldn't parse that ish" + e.getMessage());
             e.printStackTrace();
+            throw new NumberFormatException();
         }
-        return getDouble();
     }
 
 
