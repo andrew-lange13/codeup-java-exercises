@@ -24,29 +24,27 @@ public class Contacts {
 
     }
 
-    public static List<String> readFileIntoList() {
+    public static void readFileIntoList() {
         List<String> contacts = Collections.emptyList();
         try {
             contacts = Files.readAllLines(Paths.get("/Users/andrewlange/Documents/contacts.txt"), StandardCharsets.UTF_8);
             for(String contact : contacts){
-                System.out.printf("%s%n", contact + " ");
+                System.out.printf("%s%n", contact);
             }
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        return contacts;
     }
 
     public static void contactReader(){
         try {
             File contacts = new File("/Users/andrewlange/Documents/contacts.txt");
             Scanner myReader = new Scanner(contacts);
-            myReader.useDelimiter(" , ");
+//            myReader.useDelimiter(" , ");
             while (myReader.hasNextLine()) {
-                String data = myReader.next();
-                System.out.println(data);
-
+                String data = myReader.nextLine();
+                System.out.printf("%15s%n", data);
             }
             myReader.close();
         } catch (FileNotFoundException e) {
@@ -59,10 +57,16 @@ public class Contacts {
         try {
 //            FileWriter contacts = new FileWriter("/Users/andrewlange/Documents/contacts.txt");
             Scanner scan = new Scanner(System.in);
-            System.out.println("Enter new contact: ");
-            String newContact = "\n" + scan.nextLine();
-            Files.write(Paths.get("/Users/andrewlange/Documents/contacts.txt"),newContact.getBytes(StandardCharsets.UTF_8), StandardOpenOption.APPEND);
-//            Files.close();
+            scan.useDelimiter(System.lineSeparator());
+            System.out.print("Enter first name: ");
+            String newFirst = scan.next();
+            Files.writeString(Paths.get("/Users/andrewlange/Documents/contacts.txt"), ("\n" + newFirst), StandardOpenOption.APPEND);
+            System.out.print("Enter last name: ");
+            String newLast = scan.next();
+            Files.writeString(Paths.get("/Users/andrewlange/Documents/contacts.txt"), (" " + newLast + "  |  "), StandardOpenOption.APPEND);
+            System.out.print("Enter phone number: ");
+            String newNumber = scan.next();
+            Files.writeString(Paths.get("/Users/andrewlange/Documents/contacts.txt"), (newNumber + "  |"), StandardOpenOption.APPEND);
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("An error occurred.");
@@ -88,8 +92,9 @@ public class Contacts {
 //        contactCreator();
 //        contactReader();
 //        contactAdder();
+        contactReader();
 //        contactSearcher();
-        readFileIntoList();
+//        readFileIntoList();
 
     }
 }
