@@ -1,11 +1,9 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -26,13 +24,29 @@ public class Contacts {
 
     }
 
+    public static List<String> readFileIntoList() {
+        List<String> contacts = Collections.emptyList();
+        try {
+            contacts = Files.readAllLines(Paths.get("/Users/andrewlange/Documents/contacts.txt"), StandardCharsets.UTF_8);
+            for(String contact : contacts){
+                System.out.printf("%s%n", contact + " ");
+            }
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return contacts;
+    }
+
     public static void contactReader(){
         try {
             File contacts = new File("/Users/andrewlange/Documents/contacts.txt");
             Scanner myReader = new Scanner(contacts);
+            myReader.useDelimiter(" , ");
             while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
+                String data = myReader.next();
                 System.out.println(data);
+
             }
             myReader.close();
         } catch (FileNotFoundException e) {
@@ -71,11 +85,11 @@ public class Contacts {
 
     public static void main(String[] args) throws IOException {
 
-        contactCreator();
-        contactReader();
-//        contactAdder();
+//        contactCreator();
 //        contactReader();
-        contactSearcher();
+//        contactAdder();
+//        contactSearcher();
+        readFileIntoList();
 
     }
 }
