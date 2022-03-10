@@ -1,0 +1,7 @@
+coffee
+steak
+cheese
+potatoes
+spaghetti
+bread
+ramen
