@@ -90,15 +90,37 @@ public class Practice {
 
 //    1. Within your `Assessment` class create a public static method named `removeCats`. It should accept a list of animal objects and return a list of animal objects where any animal object with a species of "Felis catus" is removed.
 
-    public static List<Animal> removeCats(List<Animal> animal){
-        animal.remove("Felis catus");
-        return animal;
+//    public static List<Animal> removeCats(List<Animal> animal){
+//        animal.remove("Felis catus");
+//        return animal;
+//    }
+
+    //TODO: Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
+    public static String boolToWord(boolean b)
+    {
+        if(b){
+            return "Yes";
+        } else{
+            return "No";
+        }
+    }
+
+
+    public static int square(int num){
+        String numString = String.valueOf(num);
+        String outputNum = null;
+        for(int i = 0; i < numString.length(); i++){
+            outputNum = Math.pow(numString, 2);
+        }
+        return Integer.parseInt(outputNum);
     }
 
     public static void main(String[] args) {
 
 //        System.out.println("sumStuff() = " + Arrays.toString(sumStuff()));
         System.out.println();
+        System.out.println(square(11));
 
     }
 
