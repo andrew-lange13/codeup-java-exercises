@@ -17,4 +17,14 @@ public class FileHelper {
         return slurp(String.valueOf(Path.of(filepath)));
     }
 
+    public static void spit(String filename, List<String> contents, boolean append){
+        try{
+            Files.readAllLines(Path.of(filename));
+        }
+        catch(Exception e){
+            System.out.println("The file already exists");
+            System.exit(1);
+        }
+    }
+
 }
