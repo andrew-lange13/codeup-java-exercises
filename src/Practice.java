@@ -126,6 +126,12 @@ public class Practice {
         return listTotal / array.length;
     }
 
+    // TODO: remove the spaces from the string, then return the resultant string.
+
+    public static String noSpace(final String x) {
+        return x.replaceAll(" ", "");
+    }
+
     public static void main(String[] args) {
 
 //        System.out.println("sumStuff() = " + Arrays.toString(sumStuff()));
