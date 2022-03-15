@@ -116,6 +116,16 @@ public class Practice {
         return sum;
     }
 
+    //TODO: Write a function which calculates the average of the numbers in a given list.
+
+    public static double find_average(int[] array){
+        double listTotal = 0;
+        for (int nums : array){
+            listTotal += nums;
+        }
+        return listTotal / array.length;
+    }
+
     public static void main(String[] args) {
 
 //        System.out.println("sumStuff() = " + Arrays.toString(sumStuff()));
