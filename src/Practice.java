@@ -106,21 +106,21 @@ public class Practice {
         }
     }
 
+//    TODO: You get an array of numbers, return the sum of all of the positives ones. Example [1,-4,7,12] => 1 + 7 + 12 = 20 Note: if there is nothing to sum, the sum is default to 0.
 
-    public static int square(int num){
-        String numString = String.valueOf(num);
-        String outputNum = null;
-        for(int i = 0; i < numString.length(); i++){
-            outputNum = Math.pow(numString, 2);
+    public static int sum(int[] arr){
+        int sum = 0;
+        for(int pos : arr){
+            if(pos >0) sum += pos;
         }
-        return Integer.parseInt(outputNum);
+        return sum;
     }
 
     public static void main(String[] args) {
 
 //        System.out.println("sumStuff() = " + Arrays.toString(sumStuff()));
         System.out.println();
-        System.out.println(square(11));
+//        System.out.println(square(11));
 
     }
 
