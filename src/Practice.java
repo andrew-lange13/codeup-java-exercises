@@ -140,6 +140,11 @@ public class Practice {
         return numberString.replaceAll("[0-4]", "0").replaceAll("[5-9]", "1");
         }
 
+//        TODO: Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+    public static String disemvowel(String str) {
+        return str.replaceAll("[aAeEiIoOuU]", "");
+    }
 
     public static void main(String[] args) {
 
