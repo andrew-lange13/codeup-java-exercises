@@ -152,6 +152,16 @@ public class Practice {
         return (a + b > c) && (a + c > b) && (b + c > a);
     }
 
+//    TODO: Given a list of integers, determine whether the sum of its elements is odd or even.
+
+    public static String oddOrEven (int[] array) {
+        int sum = 0;
+        for (int num : array){
+            sum += num;
+        } if(sum % 2 == 0){
+            return "even";
+        } else {return "odd";}
+    }
 
     public static void main(String[] args) {
 
