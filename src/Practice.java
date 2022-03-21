@@ -1,7 +1,5 @@
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-import java.util.Scanner;
 
 public class Practice {
 
@@ -99,30 +97,29 @@ public class Practice {
 
     //TODO: Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
 
-    public static String boolToWord(boolean b)
-    {
-        if(b){
+    public static String boolToWord(boolean b) {
+        if (b) {
             return "Yes";
-        } else{
+        } else {
             return "No";
         }
     }
 
 //    TODO: You get an array of numbers, return the sum of all of the positives ones. Example [1,-4,7,12] => 1 + 7 + 12 = 20 Note: if there is nothing to sum, the sum is default to 0.
 
-    public static int sum(int[] arr){
+    public static int sum(int[] arr) {
         int sum = 0;
-        for(int pos : arr){
-            if(pos >0) sum += pos;
+        for (int pos : arr) {
+            if (pos > 0) sum += pos;
         }
         return sum;
     }
 
     //TODO: Write a function which calculates the average of the numbers in a given list.
 
-    public static double find_average(int[] array){
+    public static double find_average(int[] array) {
         double listTotal = 0;
-        for (int nums : array){
+        for (int nums : array) {
             listTotal += nums;
         }
         return listTotal / array.length;
@@ -138,7 +135,7 @@ public class Practice {
 
     public static String fakeBin(String numberString) {
         return numberString.replaceAll("[0-4]", "0").replaceAll("[5-9]", "1");
-        }
+    }
 
 //        TODO: Your task is to write a function that takes a string and return a new string with all vowels removed.
 
@@ -148,27 +145,48 @@ public class Practice {
 
 //    TODO: Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case. (In this case, all triangles must have surface greater than 0 to be accepted).
 
-    public static boolean isTriangle(int a, int b, int c){
+    public static boolean isTriangle(int a, int b, int c) {
         return (a + b > c) && (a + c > b) && (b + c > a);
     }
 
 //    TODO: Given a list of integers, determine whether the sum of its elements is odd or even.
 
-    public static String oddOrEven (int[] array) {
+    public static String oddOrEven(int[] array) {
         int sum = 0;
-        for (int num : array){
+        for (int num : array) {
             sum += num;
-        } if(sum % 2 == 0){
+        }
+        if (sum % 2 == 0) {
             return "even";
-        } else {return "odd";}
+        } else {
+            return "odd";
+        }
     }
 
 //    TODO: Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
 
-    static int[] nums = {1,2,3,4,5,6,7,8,9,0};
+    static int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+
     public static String createPhoneNumber(int[] numbers) {
-        return "(" + numbers[0] + numbers[1] + numbers[2] + ") " + numbers[3] + numbers[4] + numbers[5] + "-" + numbers[6] +numbers[7] + numbers[8] + numbers[9];
+        return "(" + numbers[0] + numbers[1] + numbers[2] + ") " + numbers[3] + numbers[4] + numbers[5] + "-" + numbers[6] + numbers[7] + numbers[8] + numbers[9];
     }
+
+//    TODO: If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in. Additionally, if the number is negative, return 0 (for languages that do have them).
+
+    public static int solution(int number) {
+        ArrayList<Integer> numList = new ArrayList<>();
+        int sum = 0;
+        for (int i = 0; i < number; i++) {
+            if (i % 3 == 0 | i % 5 == 0) {
+                numList.add(i);
+            }
+        }
+        for (int num : numList) {
+            sum += num;
+        }
+        return sum;
+    }
+
 
     public static void main(String[] args) {
 
@@ -176,7 +194,9 @@ public class Practice {
         System.out.println();
 //        System.out.println(square(11));
 //        System.out.println(fakeBin("45385593107843568"));
-        System.out.println(createPhoneNumber(nums));
+//        System.out.println(createPhoneNumber(nums));
+        System.out.println(solution(10));
+
 
     }
 
