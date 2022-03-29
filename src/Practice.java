@@ -195,6 +195,19 @@ public class Practice {
         } else return "Odd";
     }
 
+//    TODO: Given an array of integers, find the one that appears an odd number of times.
+
+    public static int findIt(int[] a) {
+        int counter =0 ;
+        for (int num:a) {
+            for (int j : a) {
+                if (num == j) counter++;
+            }
+            if (counter%2 != 0) return num;
+        }
+        return 0;
+    }
+
     public static void main(String[] args) {
 
 //        System.out.println("sumStuff() = " + Arrays.toString(sumStuff()));
