@@ -208,6 +208,16 @@ public class Practice {
         return 0;
     }
 
+//    TODO: You receive an array with your peers' test scores. Now calculate the average and compare your score! Return True if you're better, else False!
+
+    public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
+        int average = 0;
+        for (int points : classPoints){
+            average += points;
+        }
+        return yourPoints > (average / classPoints.length);
+    }
+
     public static void main(String[] args) {
 
 //        System.out.println("sumStuff() = " + Arrays.toString(sumStuff()));
