@@ -198,12 +198,12 @@ public class Practice {
 //    TODO: Given an array of integers, find the one that appears an odd number of times.
 
     public static int findIt(int[] a) {
-        int counter =0 ;
-        for (int num:a) {
+        int counter = 0;
+        for (int num : a) {
             for (int j : a) {
                 if (num == j) counter++;
             }
-            if (counter%2 != 0) return num;
+            if (counter % 2 != 0) return num;
         }
         return 0;
     }
@@ -212,7 +212,7 @@ public class Practice {
 
     public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
         int average = 0;
-        for (int points : classPoints){
+        for (int points : classPoints) {
             average += points;
         }
         return yourPoints > (average / classPoints.length);
@@ -221,15 +221,20 @@ public class Practice {
 //    TODO: Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
 
     public static int quarterOf(int month) {
-        if (month < 4){
+        if (month < 4) {
             return 1;
-        }else if (month < 7){
+        } else if (month < 7) {
             return 2;
-        }else if (month < 10){
+        } else if (month < 10) {
             return 3;
-        }else{
+        } else {
             return 4;
         }
+    }
+
+//    TODO: Given two non-negative integers low and high. Return the count of odd numbers between low and high (inclusive).
+    public int countOdds(int low, int high) {
+        return (high + 1) / 2 - low / 2;
     }
 
     public static void main(String[] args) {
