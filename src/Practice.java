@@ -232,9 +232,47 @@ public class Practice {
         }
     }
 
-//    TODO: Given two non-negative integers low and high. Return the count of odd numbers between low and high (inclusive).
+    //    TODO: Given two non-negative integers low and high. Return the count of odd numbers between low and high (inclusive).
     public int countOdds(int low, int high) {
         return (high + 1) / 2 - low / 2;
+    }
+
+    //    TODO: Return the average salary of employees excluding the minimum and maximum salary. Answers within 10-5 of the actual answer will be accepted.
+    public double average(int[] salary) {
+        /* First we sort the array
+		to find the max and the min value
+		from the salary array */
+
+        Arrays.sort(salary);
+
+		/* Our aim is to exclude the min and max
+		values from the salary array */
+
+        double min = salary[0];
+        double max = salary[salary.length - 1];
+
+		/* We now declare two variables
+		itr: to keep track of the elements
+		we visit and sum : sum of the elements */
+
+        int itr = 0;
+        double sum = 0d;
+
+        /* Run the loop from the first element till
+		the second last element and collect the sum
+		*/
+
+        for(int i = 1; i <= salary.length - 2; i++)
+        {
+            sum += salary[i];
+            itr++;
+        }
+
+        /* The average is calculated accordingly */
+
+        double avg = sum/itr;
+
+        return avg;
     }
 
     public static void main(String[] args) {
