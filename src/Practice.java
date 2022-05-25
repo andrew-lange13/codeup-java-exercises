@@ -215,6 +215,7 @@ public class Practice {
         for (int points : classPoints) {
             average += points;
         }
+//        return yourPoints > (average / classPoints.length);
         return yourPoints > (average / classPoints.length);
     }
 
