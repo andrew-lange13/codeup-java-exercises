@@ -276,6 +276,14 @@ public class Practice {
         return avg;
     }
 
+    public static int countBy2(int num){
+        int counter = 0;
+        for (int i = 0; i <= 100; i+=2) {
+            counter = i;
+        }
+        return counter;
+    }
+
     public static void main(String[] args) {
 
 //        System.out.println("sumStuff() = " + Arrays.toString(sumStuff()));
@@ -283,7 +291,8 @@ public class Practice {
 //        System.out.println(square(11));
 //        System.out.println(fakeBin("45385593107843568"));
 //        System.out.println(createPhoneNumber(nums));
-        System.out.println(solution(10));
+//        System.out.println(solution(10));
+        System.out.println(countBy2(0));
 
 
     }
