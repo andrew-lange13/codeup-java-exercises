@@ -195,6 +195,12 @@ public class Practice {
         } else return "Odd";
     }
 
+    public static String divisibleBy3(int num){
+        if(num % 3 == 0){
+            return "Divisible by 3";
+        } else return "not divisible by 3";
+    }
+
 //    TODO: Given an array of integers, find the one that appears an odd number of times.
 
     public static int findIt(int[] a) {
@@ -292,7 +298,7 @@ public class Practice {
 //        System.out.println(fakeBin("45385593107843568"));
 //        System.out.println(createPhoneNumber(nums));
 //        System.out.println(solution(10));
-        System.out.println(countBy2(0));
+        System.out.println(divisibleBy3(5));
 
 
     }
