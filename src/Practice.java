@@ -290,6 +290,18 @@ public class Practice {
         return counter;
     }
 
+
+//  TODO:  The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.
+
+    public static boolean sleepIn(boolean weekday, boolean vacation) {
+        if (!weekday || vacation){
+            return true;
+        }
+        return false;
+    }
+
+
+
     public static void main(String[] args) {
 
 //        System.out.println("sumStuff() = " + Arrays.toString(sumStuff()));
@@ -298,7 +310,8 @@ public class Practice {
 //        System.out.println(fakeBin("45385593107843568"));
 //        System.out.println(createPhoneNumber(nums));
 //        System.out.println(solution(10));
-        System.out.println(divisibleBy3(5));
+//        System.out.println(divisibleBy3(5));
+        System.out.println(sleepIn(false, true));
 
 
     }
